@@ -1,7 +1,5 @@
----
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/naheralaqeeq/public_html/
-    - /bin/cp index.html $DEPLOYPATH
-    - /bin/cp style.css $DEPLOYPATH
-    - /bin/cp script.js $DEPLOYPATH
+    - export DEPLOYPATH=/home/yourusername/public_html/
+    - /bin/rm -rf $DEPLOYPATH/*
+    - /bin/cp -r dist/ $DEPLOYPATH/  # Or build/, * for all files; use -r for dirs
